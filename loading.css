@@ -1,0 +1,76 @@
+@import url("//fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,900&display=swap");
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 900;
+  margin-left: 30%;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(250, 250, 246, 0.5),
+      rgba(233, 233, 240, 0.5)
+    ),
+    url("Robot-Video.png");
+}
+
+.buttom {
+  border: black solid 1px; 
+  margin-right: 1%;
+  border-radius: 20%;
+  background-color: rgb(226, 235, 235);
+}
+
+.robot {
+  position: absolute;
+  top: 80%;
+  width: 5%;
+  left: 70%;
+  translate: 3px;
+  animation: mover-izquierda-derecha 8s infinite;
+  animation-fill-mode: forwards;
+}
+@keyframes mover-izquierda-derecha {
+  from {
+    transform: translateX(-50px);
+  }
+  to {
+    transform: translateX(50px);
+  }
+}
+
+#contenedor {
+  display: grid;
+  place-content: center;
+  height: 100vh;
+  color: #000;
+}
+.cargando {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: #0a0909;
+  margin-top: 2em;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.rueda {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  border: 10px solid rgba(6, 6, 6, 0.3);
+  border-radius: 50%;
+  border-left-color: transparent;
+  width: 80px;
+  height: 80px;
+  animation: giro 2s linear infinite;
+}
+
+@keyframes giro {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
